@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp()); // MyApp is the root widget
 }
 
 class MyApp extends StatelessWidget {
@@ -10,7 +10,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    // The build method is called whenever the widget needs to be rebuilt.
+    // It is responsible for building the widget tree that represents the UI.
     return MaterialApp(
+      // MaterialApp is a convenience widget that wraps a number of widgets that are commonly required for material design applications.
+      // It provides a number of features, such as navigation, theming, and localization.
+      debugShowCheckedModeBanner:
+          false, // Disable the debug banner in the top right
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -67,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  @override
+  @override // override is used to indicate that this method is overriding a method in the superclass
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
