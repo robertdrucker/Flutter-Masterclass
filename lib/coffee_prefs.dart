@@ -9,15 +9,31 @@ class CoffeePrefs extends StatelessWidget {
       children: [
         Row(
           children: [
-            Text('Strength: '),
-            Text('3'),
-            Container(
-              color: Colors.blue,
-              child: SizedBox(width: 50, height: 12),
+            const Text('Strength: '),
+            const Text('3'),
+            // asset is a named constructor
+            Image.asset(
+              'assets/img/coffee_bean.png',
+              width: 25,
+              color: Colors.brown[100],
+              colorBlendMode: BlendMode.multiply,
             ),
+            SizedBox(width: 50),
           ],
         ),
-        Row(children: [Text('Sugars: '), Text('3'), SizedBox(width: 50)]),
+        Row(
+          children: [
+            Text('Sugars: '),
+            Text('3'),
+            Image.asset(
+              'assets/img/sugar_cube.png',
+              width: 25,
+              color: Colors.brown[100],
+              colorBlendMode: BlendMode.multiply,
+            ),
+            SizedBox(width: 50),
+          ],
+        ),
       ],
     );
   }
