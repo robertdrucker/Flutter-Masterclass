@@ -28,6 +28,16 @@ class Home extends StatelessWidget {
             padding: const EdgeInsets.all(20),
             child: const CoffeePrefs(),
           ),
+          // The expanded widget takes up all available height, but
+          // no more.  It also forces its child image to adjust to the contraint.
+          Expanded(
+            child: Image.asset(
+              'assets/img/coffee_bg.jpg',
+              fit: BoxFit.fitWidth,
+              // place bottom center of the image at the bottom
+              alignment: Alignment.bottomCenter,
+            ),
+          ),
         ],
       ),
     );
