@@ -11,8 +11,6 @@ class AppColors {
   static Color highlightColor = const Color.fromRGBO(212, 172, 13, 1);
 }
 
-// The theme data object will be passed into the MaterialApp widget for use.
-// ThemeData is the data type; primaryTheme is are given name for the theme data object.
 ThemeData primaryTheme = ThemeData(
   // seed color theme
   colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
@@ -26,5 +24,26 @@ ThemeData primaryTheme = ThemeData(
     foregroundColor: AppColors.textColor,
     surfaceTintColor: Colors.transparent,
     centerTitle: true,
+  ),
+
+  // text theme
+  textTheme: TextTheme(
+    bodyMedium: TextStyle(
+      color: AppColors.textColor,
+      fontSize: 16,
+      letterSpacing: 1,
+    ),
+    headlineMedium: TextStyle(
+      color: AppColors.titleColor,
+      fontSize: 16,
+      fontWeight: FontWeight.bold,
+      letterSpacing: 1,
+    ),
+    titleMedium: TextStyle(
+      color: AppColors.titleColor,
+      fontSize: 18,
+      fontWeight: FontWeight.bold,
+      letterSpacing: 2,
+    ),
   ),
 );
